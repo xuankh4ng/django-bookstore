@@ -44,11 +44,14 @@
                       </div>
                     </div>
                   <button type="button" data-index="{{ product.id }}" class="btn btn-secondary" id="update-cart">Update</button>
+                  <button type="button" data-index="{{ product.id }}" class="btn btn-danger" id="delete-product">Delete</button>
                   </div>
                 </div>
                   </div>
               </div>
         {% endfor %}
+        
+      <h2>Total Price: ${{ total }}</h2>
     </div>
 
 <script>
@@ -61,6 +64,28 @@
       data: {
         product_id: $(this).data('index'),
         product_quantity: $('#select' + productId + ' option:selected').text(),
+        csrfmiddlewaretoken: '{{ csrf_token }}',
+        action: 'post',
+      },
+
+      success: function(json) {
+        location.reload();
+      },
+
+      error: function(xhr, status, error) {
+        console.log(error);
+      },
+    })
+  })
+
+
+  $(document).on('click', '#delete-product', function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: '{% url "cart_delete" %}',
+      data: {
+        product_id: $(this).data('index'),
         csrfmiddlewaretoken: '{{ csrf_token }}',
         action: 'post',
       },
