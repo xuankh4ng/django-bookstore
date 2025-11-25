@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">📖 Về Chúng Tôi - Góc Sách Tri Thức</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Nơi kết nối những người yêu sách và lan tỏa văn hóa đọc.</p>
+            </div>
+        </div>
+    </header>
+    
+    <section class="py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <h2 class="fw-bolder mb-4 text-center text-primary">Chúng tôi là ai?</h2>
+                    
+                    <p class="lead text-muted mb-5">
+                        <i class="bi bi-book me-2"></i> **[Tên Cửa Hàng Của Bạn]** được thành lập với sứ mệnh mang những cuốn sách hay nhất, chất lượng nhất đến tay độc giả Việt Nam. Chúng tôi không chỉ là một cửa hàng sách trực tuyến, mà là một cộng đồng dành cho những người đam mê kiến thức và câu chuyện.
+                    </p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-4 text-center mb-4">
+                            <i class="bi bi-patch-check-fill text-success fs-2 mb-2"></i>
+                            <h3 class="h5 fw-bolder">Sách Chính Hãng</h3>
+                            <p class="text-muted">Cam kết 100% sách được xuất bản hợp pháp, chất lượng in ấn tốt nhất.</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                            <i class="bi bi-truck text-warning fs-2 mb-2"></i>
+                            <h3 class="h5 fw-bolder">Giao Hàng Nhanh</h3>
+                            <p class="text-muted">Đóng gói cẩn thận, giao hàng toàn quốc nhanh chóng và an toàn.</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                            <i class="bi bi-heart-fill text-danger fs-2 mb-2"></i>
+                            <h3 class="h5 fw-bolder">Hỗ Trợ Tận Tâm</h3>
+                            <p class="text-muted">Đội ngũ hỗ trợ luôn sẵn sàng tư vấn và giải đáp mọi thắc mắc của bạn.</p>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-5">
+
+                    <h2 class="fw-bolder mb-3 text-center text-primary">Câu chuyện của chúng tôi</h2>
+                    <p class="text-justify">
+                        Mọi thứ bắt đầu từ một người yêu sách đã phải vật lộn để tìm những đầu sách chuyên ngành chất lượng tại Việt Nam. Từ đó, ý tưởng về một nền tảng sách đáng tin cậy đã ra đời. Chúng tôi tự hào đã phục vụ hơn **10,000** độc giả và tiếp tục mở rộng thư viện của mình với hàng trăm đầu sách mới mỗi tháng.
+                    </p>
+                    <p class="text-justify">
+                        Triết lý của chúng tôi rất đơn giản: **"Một cuốn sách tốt là cánh cửa mở ra cả một thế giới mới."** Hãy để chúng tôi đồng hành cùng bạn trên hành trình khám phá tri thức không giới hạn.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="fw-bolder mb-4">Bạn đã sẵn sàng khám phá chưa?</h2>
+            <p class="lead text-muted mb-4">Đừng ngần ngại ghé thăm các danh mục sách của chúng tôi.</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'home' %}">Bắt Đầu Mua Sắm Ngay</a>
+        </div>
+    </section>
+
+{% endblock content %}
